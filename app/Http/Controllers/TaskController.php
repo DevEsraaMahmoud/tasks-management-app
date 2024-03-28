@@ -6,7 +6,6 @@ use App\Http\Requests\storeTaskRequest;
 use App\Models\Admin;
 use App\Models\Task;
 use App\Models\User;
-use Illuminate\Http\Request;
 
 class TaskController extends Controller
 {
@@ -25,8 +24,8 @@ class TaskController extends Controller
     public function create()
     {
         return view('tasks.create', [
-            'admins' => Admin::all(),
-            'users' => User::all()
+            'admins' => Admin::take(10)->get(),
+            'users' => User::take(10)->get()
         ]);
     }
 

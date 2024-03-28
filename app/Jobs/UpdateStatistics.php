@@ -14,6 +14,9 @@ class UpdateStatistics implements ShouldQueue
 {
     use Dispatchable, InteractsWithQueue, Queueable, SerializesModels;
 
+    protected $signature = 'statistics:update';
+    protected $description = 'Update statistics table with top users tasks count';
+
     public function handle(): void
     {
         $topUsers = User::has('tasks')

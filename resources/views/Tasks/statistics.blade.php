@@ -6,8 +6,8 @@
 
 @section('content')
 <h2>User Task Statistics</h2>
-<table class="table">
-    <thead>
+<div class="table-responsive">
+        <table class="table table-striped">    <thead>
         <tr>
             <th>User</th>
             <th>Task Count</th>
@@ -22,4 +22,5 @@
         @endforeach
     </tbody>
 </table>
+</div>
 @endsection
