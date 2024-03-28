@@ -11,7 +11,7 @@
         </div>
         <div class="col-auto">
             <div class="btn-group" role="group" aria-label="Task Actions">
-                <a href="{{ route('tasks.create') }}" class="btn btn-primary">Create Task</a>
+                <a href="{{ route('tasks.create') }}" class="btn btn-success">Create Task</a>
                 <a href="{{ route('tasks.statistics') }}" class="btn btn-info">View Statistics</a>
             </div>
         </div>

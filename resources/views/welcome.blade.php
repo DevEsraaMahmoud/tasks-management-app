@@ -6,7 +6,7 @@
 
 @section('content')
 <div class="jumbotron text-center">
-    <h1>Welcome to Task Management System</h1>
+    <h1>Task Management System</h1>
     <p>Click below to navigate:</p>
     <div class="mt-4">
         <a href="{{ route('tasks.index') }}" class="btn btn-primary mr-3">Task List</a>
