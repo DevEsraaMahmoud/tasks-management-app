@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Events\TaskCreated;
 use App\Http\Requests\storeTaskRequest;
 use App\Models\Admin;
 use App\Models\Task;
@@ -34,7 +35,8 @@ class TaskController extends Controller
      */
     public function store(storeTaskRequest $request)
     {
-        Task::create($request->validated());
+        $task = Task::create($request->validated());
+        event(new TaskCreated($task));
         return redirect()->route('tasks.index')->with('success', 'Task created successfully');
     }
 }
